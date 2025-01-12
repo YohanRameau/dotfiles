@@ -1,0 +1,23 @@
+# This is Git's per-user configuration file.
+[user]
+	name = RYoh
+	email = yohan.rameau@gmail.com
+[core]
+editor = nvim
+[push]
+followTags = true
+[alias]
+lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+lgfile = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --name-status
+cb = checkout
+c = commit
+cam = commit -am 
+s = status
+st = status
+b = branch
+br = branch -a --verbose
+last = cat-file commit HEAD
+rb = rebase
+rbi = rebase --interactive
+topo-log = log --oneline --graph --all --decorate
+topo-log-branch = log --oneline --graph --decorate
