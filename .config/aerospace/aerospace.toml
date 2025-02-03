@@ -11,6 +11,13 @@ after-startup-command = [
   'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0',
 ]
 
+# Notify Sketchybar about workspace change
+exec-on-workspace-change = [
+  '/bin/bash',
+  '-c',
+  'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
+]
+
 # Start AeroSpace at login
 start-at-login = true
 
@@ -44,6 +51,7 @@ on-focus-changed = 'move-mouse window-lazy-center'
 # Also see: https://nikitabobko.github.io/AeroSpace/goodies#disable-hide-app
 automatically-unhide-macos-hidden-apps = false
 
+
 # Possible values: (qwerty|dvorak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
 [key-mapping]
@@ -61,7 +69,8 @@ preset = 'qwerty'
 inner.horizontal = 10
 inner.vertical = 10
 outer.left = 10
-outer.bottom = 10
+outer.bottom = 50
+# outer.top = [{ monitor.main = 48 }, 24]
 outer.top = 50
 outer.right = 10
 

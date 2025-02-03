@@ -11,10 +11,16 @@ window-padding-balance = true
 window-save-state = always
 window-colorspace = "display-p3"
 
-macos-titlebar-style=transparent
+
+shell-integration-features = cursor,sudo,no-title
+
+# MACOS
+macos-titlebar-style="transparent"
+macos-titlebar-proxy-icon = hidden
+title = " "
 
 # THEME
-theme = Kanagawa Dragon
+theme = Dark+
 
 
 # KEYBINDINGS
@@ -44,10 +50,10 @@ keybind = cmd+s>9=goto_tab:9
 keybind = cmd+s>r=new_split:right
 keybind = cmd+s>d=new_split:down
 
-keybind = cmd+s>j=goto_split:bottom
-keybind = cmd+s>k=goto_split:top
-keybind = cmd+s>h=goto_split:left
-keybind = cmd+s>l=goto_split:right
+keybind = cmd+shift+j=goto_split:bottom
+keybind = cmd+shift+k=goto_split:top
+keybind = cmd+shift+h=goto_split:left
+keybind = cmd+shift+l=goto_split:right
 
 keybind = cmd+s>z=toggle_split_zoom
 
