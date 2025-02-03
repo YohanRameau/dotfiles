@@ -1,1 +1,42 @@
-/Users/yohanrameau/Library/Application Support/Code/User/settings.json
+{
+  // Appearence
+  "workbench.colorTheme": "Atom One Dark",
+  "breadcrumbs.enabled": false,
+  "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.activityBar.location": "top",
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorWidth": 2,
+  "editor.minimap.enabled": false,
+  "editor.fontFamily": " 'JetBrainsMono Nerd Font Mono' , 'Hack Nerd Font', Hack, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.linkedEditing": true,
+  "zenMode.fullScreen": false,
+  "zenMode.hideActivityBar": false,
+  "zenMode.hideStatusBar": false,
+  "zenMode.showTabs": "none",
+  "zenMode.silentNotifications": false,
+  "window.customTitleBarVisibility": "windowed",
+  "terminal.explorerKind": "external",
+  "terminal.external.osxExec": "ghostty.app",
+  // Formatter
+  "prettier.singleAttributePerLine": true,
+  "prettier.useEditorConfig": false,
+  "prettier.vueIndentScriptAndStyle": true,
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
+  "editor.formatOnSave": true,
+  "window.zoomLevel": 1,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "editor.accessibilitySupport": "off",
+  // VIM Settings
+  "vim.leader": "<Space>",
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+  "vim.easymotion": true,
+}
