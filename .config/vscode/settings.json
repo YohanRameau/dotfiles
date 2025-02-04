@@ -2,6 +2,7 @@
   // Appearence
   "workbench.colorTheme": "Atom One Dark",
   "breadcrumbs.enabled": false,
+  "workbench.editor.showTabs": "none",
   "workbench.editor.editorActionsLocation": "hidden",
   "workbench.activityBar.location": "top",
   "editor.cursorBlinking": "smooth",
@@ -38,5 +39,6 @@
   "vim.leader": "<Space>",
   "vim.useSystemClipboard": true,
   "vim.hlsearch": true,
-  "vim.easymotion": true,
+  "vim.easymotion": false,
+  "vim.surround": true
 }

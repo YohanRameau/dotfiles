@@ -1,5 +1,45 @@
-// Placer vos combinaisons de touches dans ce fichier pour remplacer les valeurs par défaut
 [
+    // tab
+    {
+        "key": "shift-up",
+        "command": "workbench.action.increaseViewHeight",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "key": "shift-down",
+        "command": "workbench.action.decreaseViewHeight",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "key": "shift-left",
+        "command": "workbench.action.decreaseViewWidth",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "key": "shift-right",
+        "command": "workbench.action.increaseViewWidth",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "key": "space w v",
+        "command": "workbench.action.splitEditorDown",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "key": "space w h",
+        "command": "workbench.action.splitEditorRight",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "key": "space w d",
+        "command": "workbench.action.closeEditorsInGroup",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "key": "space b d",
+        "command": "workbench.action.closeActiveEditor",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
     {
         "key": "ctrl-h",
         "command": "workbench.action.navigateLeft",
@@ -17,6 +57,17 @@
         "command": "workbench.action.navigateRight",
     },
     {
+        "key": "tab",
+        "command": "workbench.action.nextEditorInGroup",
+        "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "key": "shift-tab",
+        "command": "workbench.action.previousEditorInGroup",
+        "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+    },
+    // search
+    {
         "key": "space space",
         "command": "workbench.action.quickOpen",
         "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
@@ -33,19 +84,10 @@
     },
     {
         "key": "space e",
-        "command": "workbench.action.toggleSidebarVisibility",
+        "command": "workbench.view.explorer",
         "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
     },
-    {
-        "key": "tab",
-        "command": "workbench.action.nextEditorInGroup",
-        "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
-    },
-    {
-        "key": "shift-tab",
-        "command": "workbench.action.previousEditorInGroup",
-        "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
-    },
+    // Code
     {
         "key": "ctrl-n",
         "command": "editor.action.addSelectionToNextFindMatch",
@@ -59,6 +101,11 @@
     {
         "key": "shift-j",
         "command": "editor.action.moveLinesDownAction",
+        "when": "(vim.mode != 'Insert' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "key": "shift-k",
+        "command": "editor.action.moveLinesUpAction",
         "when": "(vim.mode != 'Insert' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
     },
     {
@@ -87,12 +134,12 @@
         "when": "vim.mode == 'Normal' && editorTextFocus"
     },
     {
-        "key": "space g d",
+        "key": "g d",
         "command": "editor.action.revealDefinition",
         "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
     },
     {
-        "key": "space g r",
+        "key": "g r",
         "command": "editor.action.goToReferences",
         "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
     },
@@ -100,6 +147,12 @@
         "key": "ctrl-n",
         "command": "editor.action.addSelectionToNextFindMatch",
         "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+    },
+    // File Explorer
+    {
+        "key": "space e",
+        "command": "workbench.view.explorer",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
     },
     {
         "key": "r",
@@ -162,6 +215,56 @@
         "key": "enter",
         "command": "list.toggleExpand",
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && explorerResourceIsFolder && !inputFocus"
-    }
-]
+    },
+    // Debug
+    {
+        "key": "space d b",
+        "command": "editor.debug.action.toggleBreakpoint",
+        "when": "vim.mode == 'Normal' && (debuggersAvailable && disassemblyViewFocus || debuggersAvailable && editorTextFocus)"
+    },
+    {
+        "key": "space d c",
+        "command": "workbench.action.debug.continue",
+        "when": "vim.mode == 'Normal' && (debugState == 'stopped' && editorTextFocus)"
+    },
+    {
+        "key": "space d shift-c",
+        "command": "debug.jumpToCursor",
+        "when": "vim.mode == 'Normal' && editorTextFocus && debugState != 'inactive'"
+    },
+    {
+        "key": "space d i",
+        "command": "workbench.action.debug.stepInto",
+        "when": "vim.mode == 'Normal' && editorTextFocus && debugState != 'inactive'"
+    },
+    {
+        "key": "space d o",
+        "command": "workbench.action.debug.stepOut",
+        "when": "vim.mode == 'Normal' && editorTextFocus && debugState == 'stopped'"
+    },
+    {
+        "key": "space d shift-o",
+        "command": "workbench.action.debug.stepOver",
+        "when": "vim.mode == 'Normal' && editorTextFocus && debugState == 'stopped'"
+    },
+    {
+        "key": "space d p",
+        "command": "workbench.action.debug.pause",
+        "when": "vim.mode == 'Normal' && debugState == 'running'"
+    },
+    {
+        "key": "space d r",
+        "command": "workbench.debug.action.toggleRepl",
+        "when": "vim.mode == 'Normal' && workbench.panel.repl.view.active"
+    },
+    {
+        "key": "space d s",
+        "command": "workbench.action.debug.selectDebugSession",
+        "when": "vim.mode == 'Normal' && (debuggersAvailable && disassemblyViewFocus || debuggersAvailable && editorTextFocus)"
+    },
+    {
+        "key": "space d t",
+        "command": "workbench.action.debug.stop",
+        "when": "vim.mode == 'Normal' && (debuggersAvailable && disassemblyViewFocus || debuggersAvailable && editorTextFocus)"
+    },
 ]
