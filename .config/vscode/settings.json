@@ -13,6 +13,8 @@
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "editor.linkedEditing": true,
+  "editor.renderWhitespace": "all",
+  "editor.lineNumbers": "relative",
   "zenMode.fullScreen": false,
   "zenMode.hideActivityBar": false,
   "zenMode.hideStatusBar": false,
