@@ -144,6 +144,16 @@
         "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
     },
     {
+        "key": "g b",
+        "command": "workbench.action.navigateBack",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "key": "g f",
+        "command": "workbench.action.navigateForward",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
+    {
         "key": "ctrl-n",
         "command": "editor.action.addSelectionToNextFindMatch",
         "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
