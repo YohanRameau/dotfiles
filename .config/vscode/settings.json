@@ -42,5 +42,9 @@
   "vim.useSystemClipboard": true,
   "vim.hlsearch": true,
   "vim.easymotion": false,
-  "vim.surround": true
+  "vim.surround": true,
+  "workbench.sideBar.location": "right",
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  }
 }
