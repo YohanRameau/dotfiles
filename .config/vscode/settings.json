@@ -4,7 +4,7 @@
   "breadcrumbs.enabled": false,
   "workbench.editor.showTabs": "none",
   "workbench.editor.editorActionsLocation": "hidden",
-  "workbench.activityBar.location": "top",
+  "workbench.activityBar.location": "bottom",
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorWidth": 2,
@@ -46,5 +46,7 @@
   "workbench.sideBar.location": "right",
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1"
-  }
+  },
+  "workbench.startupEditor": "none",
+  "markdown-preview-enhanced.liveUpdate": true
 }

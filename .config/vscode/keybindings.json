@@ -277,9 +277,40 @@
         "command": "workbench.action.debug.stop",
         "when": "vim.mode == 'Normal' && (debuggersAvailable && disassemblyViewFocus || debuggersAvailable && editorTextFocus)"
     },
+    // Tests
+    {
+        "key": "space t v",
+        "command": "workbench.view.testing.focus",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "key": "space t r",
+        "command": "testing.refreshTests",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "key": "space t a",
+        "command": "testing.runAll",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "key": "space t f",
+        "command": "testing.runCurrentFile",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "key": "space t c",
+        "command": "testing.runAtCursor",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "key": "space t d",
+        "command": "testing.debugAtCursor",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
     // Git
     {
-        "key": "space g g",
+        "key": "space g v",
         "command": "workbench.view.scm",
         "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
     },
@@ -312,5 +343,5 @@
         "key": "space g c",
         "command": "git.message",
         "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
-    }
+    },
 ]
